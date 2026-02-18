@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Room homepage</title>
+
+</head>
+
+<body class="league-spartan relative">
+  <header class="flex absolute top-0 w-[55%] justify-between items-center pt-8 pl-6 z-10">
+    <button id="menu-button" aria-expanded="false" aria-label="menu"><i
+        class="fa-solid fa-bars text-white transition-colors duration-200 hover:text-black"></i></button>
+    <a href="/"><img src="images/logo.svg" alt="Website logo" class="object-contain block"></a>
+    <nav class="hidden">
+      <ul class="nav">
+        <li class="nav__item"><a href="#">Home</a></li>
+        <li class="nav__item"><a href="#">Shop</a></li>
+        <li class="nav__item"><a href="#">About</a></li>
+        <li class="nav__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Carousel -->
+    <article class="carousel relative" aria-roledescription="carousel">
+      <div class="w-fit flex items-center absolute top-[38.5vh] right-0">
+        <button aria-label="previous slide" class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
+          <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] size-3.5 rotate-45"></div>
+        </button>
+        <button aria-label="next slide" class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
+          <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] size-3.5 rotate-45"></div>
+        </button>
+      </div>
+      <ul>
+        <li class="slide">
+          <!-- Slide 1 -->
+          <!-- Image -->
+          <div class="image">
+            <img src="images/mobile-image-hero-1.jpg" alt="Chairs, table and a plant placed in the middle of table">
+          </div>
+          <!-- Content -->
+          <div class="content">
+            <h1>Discover innovative ways to decorate</h1>
+            <p> We provide unmatched quality, comfort, and style for
+              property
+              owners across the country.
+              Our experts combine form and function in bringing your vision to life. Create a room in your
+              own style with our collection and make your property a reflection of you and what you love.</p>
+            <button class="group">
+              <div>Shop now</div>
+              <div class="flex items-center">
+                <div class="arrow-line w-10 bg-black h-[1.6px] group-hover:bg-cust-grey-500"></div>
+                <div
+                  class=" border-black border-t-[1.6px] border-r-[1.6px] h-2 w-2 rotate-45 -ml-2 group-hover:border-cust-grey-500">
+                </div>
+              </div>
+            </button>
+          </div>
+        </li>
+        <!-- Slide 2 -->
+        <li class="slide hidden">
+          <!-- Image -->
+          <div class="image">
+            <img src="images/mobile-image-hero-2.jpg" alt="Three Chairs">
+          </div>
+          <!-- Content -->
+          <div class="content " aria-hidden="true">
+            <h1>Manufactured with the best materials</h1>
+            <p> Our modern furniture store provide a high level of quality. Our company has invested in advanced
+              technology
+              to ensure that every product is made as perfect and as consistent as possible. With three decades of
+              experience in this industry, we understand what customers want for their home and office.</p>
+            <button class="group">
+              <div>Shop now</div>
+              <div class="flex items-center">
+                <div class="arrow-line w-10 bg-black h-[1.6px] group-hover:bg-cust-grey-500"></div>
+                <div
+                  class=" border-black border-t-[1.6px] border-r-[1.6px] h-2 w-2 rotate-45 -ml-2 group-hover:border-cust-grey-500">
+                </div>
+              </div>
+            </button>
+          </div>
+        </li>
+        <!-- Slide 3 -->
+        <li class="slide hidden">
+          <!-- Image -->
+          <div class="image">
+            <img src="images/mobile-image-hero-3.jpg" alt="Black chair">
+          </div>
+          <!-- Content -->
+          <div class="content " aria-hidden="true">
+            <h1>We are available all across the globe</h1>
+            <p> With stores all over the world, it's easy for you to find furniture for your home or place of business.
+              Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+              store locator. Any questions? Don't hesitate to contact us today.</p>
+            <button class="group">
+              <div>Shop now</div>
+              <div class="flex items-center">
+                <div class="arrow-line w-10 bg-black h-[1.6px] group-hover:bg-cust-grey-500"></div>
+                <div
+                  class=" border-black border-t-[1.6px] border-r-[1.6px] h-2 w-2 rotate-45 -ml-2 group-hover:border-cust-grey-500">
+                </div>
+              </div>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </article>
+    <!-- About -->
+    <article class="about">
+      <div><img src="images/image-about-dark.jpg" alt="balck Chairs and table" class="object-cover w-full"></div>
+      <div class="px-8 py-12">
+        <h2 class="font-bold uppercase tracking-[0.2rem]">About our furniture</h2>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.</p>
+      </div>
+      <div><img src="images/image-about-light.jpg" alt="Light image of a chair" class="object-contain w-full"></div>
+    </article>
+  </main>
+</body>
+
+</html>

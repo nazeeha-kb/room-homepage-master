@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.league-spartan {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --color-cust-grey-500: hsl(0, 0%, 63%);
+    --color-cust-grey-800: hsl(0, 0%, 27%);
+    /* font size */
+    --text-para: 16px;
+    /* font weight: 500 - medium, 600 - semibold, 700 - bold */
+}
+
+@layer base {
+    p {
+        @apply text-para text-cust-grey-500 font-semibold pt-4;
+        ;
+    }
+
+    button,
+    a {
+        @apply cursor-pointer;
+    }
+}
+
+@layer components {
+
+
+    /* Slide Image */
+    .image {
+        height: 46vh;
+    }
+
+    .slide img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Slide Content */
+    .content {
+        @apply py-15 px-8;
+    }
+
+    .content h1 {
+        @apply text-4xl font-bold;
+    }
+
+    .content button {
+        @apply self-start font-medium uppercase tracking-[0.6rem] pt-8 flex items-center gap-4;
+    }
+
+    .content button:hover {
+        @apply text-cust-grey-500 transition-colors duration-150
+    }
+}
