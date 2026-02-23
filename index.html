@@ -12,17 +12,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <script defer src="main.js"></script>
   <title>Frontend Mentor | Room homepage</title>
 
 </head>
 
 <body class="league-spartan relative">
+  <div id="overlay" class="bg-black/50 absolute inset-0 z-10 opacity-0 transition-opacity duration-500"></div>
   <header class="flex absolute top-0 w-[55%] justify-between items-center pt-8 pl-6 z-10">
-    <button id="menu-button" aria-expanded="false" aria-label="menu"><i
-        class="fa-solid fa-bars text-white transition-colors duration-200 hover:text-black"></i></button>
+    <button id="menu-btn" aria-expanded="false" aria-label="menu"
+      class="z-30 text-white transition-colors duration-200 hover:text-black"><i class="fa-solid fa-bars" id="menu-icon"></i></button>
     <a href="/"><img src="images/logo.svg" alt="Website logo" class="object-contain block"></a>
-    <nav class="hidden">
-      <ul class="nav">
+    <nav class="absolute bg-white z-20 -translate-y-50 transition-transform duration-500 top-0 left-0 w-screen py-8 pr-5 flex justify-end font-bold" id="menu" inert="">
+      <ul class="nav flex self-end lowercase w-[65vw] justify-between">
         <li class="nav__item"><a href="#">Home</a></li>
         <li class="nav__item"><a href="#">Shop</a></li>
         <li class="nav__item"><a href="#">About</a></li>
@@ -34,10 +36,12 @@
     <!-- Carousel -->
     <article class="carousel relative" aria-roledescription="carousel">
       <div class="w-fit flex items-center absolute top-[38.5vh] right-0">
-        <button aria-label="previous slide" class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
+        <button aria-label="previous slide"
+          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
           <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] size-3.5 rotate-45"></div>
         </button>
-        <button aria-label="next slide" class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
+        <button aria-label="next slide"
+          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
           <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] size-3.5 rotate-45"></div>
         </button>
       </div>
