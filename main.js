@@ -3,6 +3,28 @@ const menuIcon = document.getElementById("menu-icon");
 const menu = document.getElementById("menu");
 const overlay = document.getElementById("overlay");
 
+// Desktop width
+const desktopQuery = window.matchMedia('(min-width: 768px)');
+
+// Handling inert attribute according to screen sizes
+function handleResize(e) {
+    if (e.matches) {
+        // Desktop: make nav interactive, remove inert, ensure menu open
+        menu.removeAttribute('inert');
+    } else {
+        if (menuBtn.getAttribute("aria-expanded") === "false") {
+            // Mobile: nav might be hidden, inert added by default
+            menu.setAttribute('inert', '');
+        }
+    }
+}
+
+// Listen for changes
+desktopQuery.addEventListener('change', handleResize);
+
+// Initial check
+handleResize(desktopQuery);
+
 const setInert = (el, inert) => {
     if (!el) return;
 
