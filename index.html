@@ -17,14 +17,17 @@
 
 </head>
 
-<body class="league-spartan relative">
+<body class="league-spartan relative md:h-screen md:overflow-hidden">
   <div id="overlay" class="bg-black/50 absolute inset-0 z-10 opacity-0 transition-opacity duration-500" inert=""></div>
-  <header class="flex absolute top-0 w-[55%] justify-between items-center pt-8 pl-6 z-10">
+  <header class="flex absolute md:pl-12 top-0 w-[55%] md:justify-start justify-between items-center pt-8 pl-6 z-10">
     <button id="menu-btn" aria-expanded="false" aria-label="menu"
-      class="z-30 text-white transition-colors duration-200 hover:text-black"><i class="fa-solid fa-bars" id="menu-icon"></i></button>
+      class="z-30 md:hidden text-white transition-colors duration-200 hover:text-black"><i class="fa-solid fa-bars"
+        id="menu-icon"></i></button>
     <a href="/"><img src="images/logo.svg" alt="Website logo" class="object-contain block"></a>
-    <nav class="absolute bg-white z-20 -translate-y-50 transition-transform duration-500 top-0 left-0 w-screen py-8 pr-5 flex justify-end font-bold" id="menu">
-      <ul class="nav flex self-end lowercase w-[65vw] justify-between">
+    <nav
+      class="md:static absolute md:bg-transparent md:font-normal md:text-white bg-white z-20 md:pl-20 md:translate-y-0 -translate-y-50 transition-transform duration-500 top-0 md:right- left-0 md:w-fit w-screen py-8 pr-5 flex md:justify-start justify-end font-bold"
+      id="menu">
+      <ul class="nav flex self-end lowercase md:w-[18vw] w-[65vw] justify-between">
         <li class="nav__item"><a href="#">Home</a></li>
         <li class="nav__item"><a href="#">Shop</a></li>
         <li class="nav__item"><a href="#">About</a></li>
@@ -32,25 +35,29 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="h-full">
     <!-- Carousel -->
     <article class="carousel relative" aria-roledescription="carousel">
-      <div class="w-fit flex items-center absolute top-[38.5vh] right-0">
+      <div class="w-fit flex items-center absolute top-[38.5vh] md:-translate-x-111.5 md:translate-y-36 right-0">
         <button aria-label="previous slide"
-          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
-          <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] size-3.5 rotate-45"></div>
+          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 md:px-11 md:py-8 px-6 py-6">
+          <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] md:size-4 size-3.5 rotate-45"></div>
         </button>
         <button aria-label="next slide"
-          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
-          <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] size-3.5 rotate-45"></div>
+          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 md:px-11 md:py-8 px-6 py-6">
+          <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] md:size-4 size-3.5 rotate-45"></div>
         </button>
       </div>
-      <ul>
+      <ul class="h-full">
+        <!-- Slide 1 -->
         <li class="slide">
-          <!-- Slide 1 -->
           <!-- Image -->
           <div class="image">
-            <img src="images/mobile-image-hero-1.jpg" alt="Chairs, table and a plant placed in the middle of table">
+            <picture>
+              <source srcset="images/mobile-image-hero-1.jpg" media="(max-width: 767px)">
+              <source srcset="images/desktop-image-hero-1.jpg" media="(min-width: 768px)">
+              <img src="images/desktop-image-hero-1.jpg" alt="Chairs, table and a plant placed in the middle of table">
+            </picture>
           </div>
           <!-- Content -->
           <div class="content">
@@ -72,7 +79,7 @@
           </div>
         </li>
         <!-- Slide 2 -->
-        <li class="slide hidden">
+        <li class="slide flex md:flex-row flex-col hidden">
           <!-- Image -->
           <div class="image">
             <img src="images/mobile-image-hero-2.jpg" alt="Three Chairs">
@@ -96,7 +103,7 @@
           </div>
         </li>
         <!-- Slide 3 -->
-        <li class="slide hidden">
+        <li class="slide flex md:flex-row flex-col hidden">
           <!-- Image -->
           <div class="image">
             <img src="images/mobile-image-hero-3.jpg" alt="Black chair">
@@ -121,16 +128,18 @@
       </ul>
     </article>
     <!-- About -->
-    <article class="about">
-      <div><img src="images/image-about-dark.jpg" alt="balck Chairs and table" class="object-cover w-full"></div>
-      <div class="px-8 py-12">
+    <article class="about flex md:flex-row flex-col">
+      <div class="w-full h-full"><img src="images/image-about-dark.jpg" alt="balck Chairs and table"
+          class="object-cover w-full md:h-full"></div>
+      <div class="px-8 md:px-12 md:py-10 py-12 w-[120vw]">
         <h2 class="font-bold uppercase tracking-[0.2rem]">About our furniture</h2>
         <p>Our multifunctional collection blends design and function to suit your individual taste.
           Make each room unique, or pick a cohesive theme that best express your interests and what
           inspires you. Find the furniture pieces you need, from traditional to contemporary styles
           or anything in between. Product specialists are available to help you create your dream space.</p>
       </div>
-      <div><img src="images/image-about-light.jpg" alt="Light image of a chair" class="object-contain w-full"></div>
+      <div class="w-full"><img src="images/image-about-light.jpg" alt="Light image of a chair"
+          class="object-cover w-full md:h-full"></div>
     </article>
   </main>
 </body>
