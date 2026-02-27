@@ -36,16 +36,16 @@
 
     /* Slide Image */
     .image {
-        @apply w-full h-fit;
+        @apply w-full h-94 md:h-140 lg:h-125 xl:h-135;
     }
 
     .slide img {
-        @apply object-contain md:w-auto w-full;
+        @apply object-cover w-full h-full;
     }
 
     /* Slide Content */
     .content {
-        @apply py-15 px-8 md:w-[70vw] md:p-20 flex flex-col justify-center items-center;
+        @apply py-15 px-8 md:py-0 md:w-100 lg:w-250 xl:w-265 md:p-15 lg:pt-10 lg:-translate-y-10 lg:px-20 flex flex-col justify-center md:items-center;
     }
 
     .content h1 {
