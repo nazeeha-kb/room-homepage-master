@@ -3,6 +3,11 @@ const menuIcon = document.getElementById("menu-icon");
 const menu = document.getElementById("menu");
 const overlay = document.getElementById("overlay");
 
+// carousel constants
+const carouselNavigation = document.getElementById("carousel-navigation");
+const carouselButtons = document.querySelectorAll("#carousel-btn");
+const slides = document.getElementById("carousel-slides");
+
 // Desktop width
 const desktopQuery = window.matchMedia('(min-width: 768px)');
 
@@ -73,3 +78,40 @@ document.addEventListener("click", (e) => {
         toggleMenu();
     }
 })
+
+// *********** carousel logic *************
+
+
+// loop over the navigation buttons
+carouselButtons.forEach(button => {
+
+    // add event listener to each
+    button.addEventListener("click", () => {
+        // If next, set const offset to 1 else -1
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+        // get the active slide
+        const activeSlide = slides.querySelector("[data-active]")
+        
+        // get the new index -> converting slides into an array -> get index of active slide + offset
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+        console.log("newindex",newIndex)
+
+        // Looping - first and last case
+
+        // If navigating to the previous of first slide - navigate to the last
+        // --> if new index is < 0 -> set the newIndex to be of slides / slidecontainer's lenght
+
+        if (newIndex < 0) newIndex = slides.children.length - 1;
+
+        // If navigating to the next of last slide, navigate to the first
+        //--> If new index >= slides.length -> newIndex = 0
+
+        if (newIndex >= slides.children.length) newIndex = 0;
+
+        // Set the child of slides / slidecontainer at the newIndex to be data-active='true'
+        slides.children[newIndex].dataset.active = true;
+        // Remove data-active from the current slide
+        delete activeSlide.dataset.active;
+    })
+
+});

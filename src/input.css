@@ -31,7 +31,7 @@
 
     /* Slide */
     .slide {
-        @apply flex md:flex-row flex-col h-full;
+        @apply flex md:flex-row flex-col h-full opacity-0 absolute inset-0 transition-opacity duration-500;
     }
 
     /* Slide Image */
@@ -59,4 +59,8 @@
     .content button:hover {
         @apply text-cust-grey-500 transition-colors duration-150
     }
+}
+
+.slide[data-active] {
+    @apply opacity-100;
 }
