@@ -5,7 +5,7 @@ const overlay = document.getElementById("overlay");
 
 // carousel constants
 const carouselNavigation = document.getElementById("carousel-navigation");
-const carouselButtons = document.querySelectorAll("#carousel-btn");
+const carouselButtons = document.querySelectorAll(".carousel-btn");
 const slides = document.getElementById("carousel-slides");
 
 // Desktop width
@@ -91,10 +91,10 @@ carouselButtons.forEach(button => {
         const offset = button.dataset.carouselButton === "next" ? 1 : -1;
         // get the active slide
         const activeSlide = slides.querySelector("[data-active]")
-        
+
         // get the new index -> converting slides into an array -> get index of active slide + offset
         let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-        console.log("newindex",newIndex)
+        console.log("newindex", newIndex)
 
         // Looping - first and last case
 
@@ -108,10 +108,15 @@ carouselButtons.forEach(button => {
 
         if (newIndex >= slides.children.length) newIndex = 0;
 
+        // Adding and removing aria-hidden
+        activeSlide.setAttribute("aria-hidden", true)
+        slides.children[newIndex].setAttribute("aria-hidden", true)
+
         // Set the child of slides / slidecontainer at the newIndex to be data-active='true'
         slides.children[newIndex].dataset.active = true;
         // Remove data-active from the current slide
         delete activeSlide.dataset.active;
+
     })
 
 });

@@ -45,19 +45,17 @@
         class="w-fit flex items-center absolute translate-y-74.5 md:translate-y-120.5 md:-translate-x-86 lg:-translate-x-99 lg:translate-y-109.5 xl:-translate-x-111 xl:translate-y-112 right-0 z-10"
         aria-label="carousel navigation">
         <button data-carousel-button="previous" aria-label="previous"
-          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 lg:py-6 md:px-8 md:py-8 xl:px-11 xl:py-9 px-6 py-6"
-          id="carousel-btn">
+          class="bg-black carousel-btn transition-colors duration-200 hover:bg-cust-grey-800 lg:py-6 md:px-8 md:py-8 xl:px-11 xl:py-9 px-6 py-6">
           <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] xl:size-5 size-3.5 rotate-45"></div>
         </button>
         <button data-carousel-button="next" aria-label="next"
-          class="bg-black transition-colors duration-200 hover:bg-cust-grey-800 lg:py-6 md:px-8 md:py-8 xl:px-11 xl:py-9 px-6 py-6"
-          id="carousel-btn">
+          class="bg-black carousel-btn transition-colors duration-200 hover:bg-cust-grey-800 lg:py-6 md:px-8 md:py-8 xl:px-11 xl:py-9 px-6 py-6">
           <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] xl:size-5 size-3.5 rotate-45"></div>
         </button>
       </div>
       <ul class="h-full relative" data-slides id="carousel-slides">
         <!-- Slide 1 -->
-        <li class="slide" id="carousel-slide" data-active="">
+        <li class="slide" id="carousel-slide" data-active="" aria-hidden="true">
           <!-- Image -->
           <div class="image">
             <picture>
@@ -86,7 +84,7 @@
           </div>
         </li>
         <!-- Slide 2 -->
-        <li class="slide" id="carousel-slide">
+        <li class="slide" id="carousel-slide" aria-hidden="false">
           <!-- Image -->
           <div class="image">
             <img src="images/mobile-image-hero-2.jpg" alt="Three Chairs">
@@ -110,7 +108,7 @@
           </div>
         </li>
         <!-- Slide 3 -->
-        <li class="slide" id="carousel-slide">
+        <li class="slide" id="carousel-slide" aria-hidden="false">
           <!-- Image -->
           <div class="image">
             <img src="images/mobile-image-hero-3.jpg" alt="Black chair">
