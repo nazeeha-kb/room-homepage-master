@@ -26,13 +26,29 @@
         id="menu-icon"></i></button>
     <a href="/"><img src="images/logo.svg" alt="Website logo" class="object-contain block"></a>
     <nav
-      class="md:static absolute md:bg-transparent md:font-normal md:text-white bg-white z-20 md:pl-20 md:translate-y-0 -translate-y-50 transition-transform duration-500 top-0 md:right- left-0 md:w-fit w-screen py-8 pr-5 flex md:justify-start justify-end font-bold"
+      class="md:static absolute md:bg-transparent md:font-semibold md:text-white bg-white z-20 md:pl-20 md:translate-y-0 -translate-y-50 transition-transform duration-500 top-0 md:right- left-0 md:w-fit w-screen py-8 pr-5 flex md:justify-start justify-end font-bold"
       id="menu">
       <ul class="nav flex self-end lowercase md:w-[18vw] sm:w-[40vw] w-[65vw] justify-between md:gap-8 gap-6">
-        <li class="nav__item"><a href="#">Home</a></li>
-        <li class="nav__item"><a href="#">Shop</a></li>
-        <li class="nav__item"><a href="#">About</a></li>
-        <li class="nav__item"><a href="#">Contact</a></li>
+        <li class="nav__item group"><a href="#">
+            <span class="relative">Home
+              <span class="cust-underline"></span></a>
+          </span>
+        </li>
+        <li class="nav__item group"><a href="#">
+            <span class="relative">Shop
+              <span class="cust-underline"></span></a>
+          </span>
+        </li>
+        <li class="nav__item group"><a href="#">
+            <span class="relative">About
+              <span class="cust-underline"></span></a>
+          </span>
+        </li>
+        <li class="nav__item group"><a href="#">
+            <span class="relative">Contact
+              <span class="cust-underline"></span></a>
+          </span>
+        </li>
       </ul>
     </nav>
   </header>
@@ -42,15 +58,15 @@
       data-carousel="">
       <!-- carousel navigation -->
       <div
-        class="w-fit flex items-center absolute translate-y-74.5 md:translate-y-120.5 md:-translate-x-86 lg:-translate-x-99 lg:translate-y-109.5 xl:-translate-x-111 xl:translate-y-112 right-0 z-10"
+        class="w-fit flex items-center absolute translate-y-78.5 md:translate-y-124.5 md:-translate-x-86 lg:-translate-x-99 lg:translate-y-109.5 xl:-translate-x-133 xl:translate-y-119 right-0 z-10"
         aria-label="carousel navigation">
         <button data-carousel-button="previous" aria-label="previous"
-          class="bg-black carousel-btn transition-colors duration-200 hover:bg-cust-grey-800 lg:py-6 md:px-8 md:py-8 xl:px-11 xl:py-9 px-6 py-6">
-          <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] xl:size-5 size-3.5 rotate-45"></div>
+          class="bg-black carousel-btn transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
+          <div class="border-cust-grey-500 border-b-[1.6px] border-l-[1.6px] xl:size-4 size-3.5 rotate-45"></div>
         </button>
         <button data-carousel-button="next" aria-label="next"
-          class="bg-black carousel-btn transition-colors duration-200 hover:bg-cust-grey-800 lg:py-6 md:px-8 md:py-8 xl:px-11 xl:py-9 px-6 py-6">
-          <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] xl:size-5 size-3.5 rotate-45"></div>
+          class="bg-black carousel-btn transition-colors duration-200 hover:bg-cust-grey-800 px-6 py-6">
+          <div class="border-cust-grey-500 border-t-[1.6px] border-r-[1.6px] xl:size-4 size-3.5 rotate-45"></div>
         </button>
       </div>
       <ul class="h-full relative" data-slides id="carousel-slides">

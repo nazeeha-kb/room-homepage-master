@@ -59,6 +59,12 @@
     .content button:hover {
         @apply text-cust-grey-500 transition-colors duration-150
     }
+
+    /* Nav item underline */
+
+    .cust-underline {
+        @apply bg-white w-full h-[1.5px] absolute -bottom-2 left-0 scale-x-0 origin-center group-hover:scale-x-100 transition-transform duration-300 ease-out;
+    }
 }
 
 .slide[data-active] {
